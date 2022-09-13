@@ -7,4 +7,4 @@
 	and then gave a 418. When curl -i on http://www.google.com/teapot, we get a 418
 7.) -X POST has form contents in the output while the regular curl does not. -X POST flag also
 	changed the REQUEST_METHOD to POST. -X POST is useful for looking at the POST request 
-8.)
+8.) https://raw.githubusercontent.com/prestonling/cmput404-labs/main/lab1/lab1.py
