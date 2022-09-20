@@ -1,0 +1,14 @@
+q1:
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+q2: 
+- client initiates connection
+- server socket needs to bind host and port info, while client needs to connect to 
+the host and port info
+- server must set the socket to listening mode
+q3: 
+- s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+q4:
+- gets the socket object from the incoming connection and the address that is bound to the other side of the socket
+q5
+- recieves the data from the client. From the terminal command, it would receive "Foobar"
+q6
