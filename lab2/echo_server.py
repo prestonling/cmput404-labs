@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import socket
 import time
+from multiprocessing import Process
 
 #define address & buffer size
 HOST = ""
@@ -22,12 +23,18 @@ def main():
         while True:
             conn, addr = s.accept()
             print("Connected by", addr)
+
+            p = Process(target=receive_client, args =(conn, addr))
+            p.start()
+            conn.close()
+
             
             #recieve data, wait a bit, then send it back
-            full_data = conn.recv(BUFFER_SIZE)
-            time.sleep(0.5)
-            conn.sendall(full_data)
-            conn.close()
+def receive_client(conn, addr):
+    full_data = conn.recv(BUFFER_SIZE)
+    time.sleep(0.5)
+    conn.sendall(full_data)
+
 
 if __name__ == "__main__":
     main()
