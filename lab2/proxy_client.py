@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 import socket, sys
-from multiprocessing import Process
 
 #create a tcp socket
 def create_tcp_socket():

@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import socket
 import time
+from multiprocessing import Process
 
 #define address & buffer size
 HOST = "127.0.0.1"
@@ -31,13 +32,10 @@ def main():
         #continuously listen for connections
         while True:
             conn, addr = s.accept()
-            print("Connected by", addr)
-            
-            #recieve data, wait a bit, then send it back
-            client_data = conn.recv(BUFFER_SIZE)
-            time.sleep(0.5)
-            google_data = connect_google(client_data)
-            conn.sendall(client_data)
+            # connect_client(conn, addr)
+            p = Process(target=connect_client, args=(conn, addr))
+            p.daemon = True
+            p.start()
             conn.close()
 
 #get host information
@@ -63,6 +61,7 @@ def send_data(serversocket, payload):
     print("Payload sent successfully")
 
 def connect_google(payload):
+    full_data = b""
     try:
         #define address info, payload, and buffer size
         host = 'www.google.com'
@@ -82,7 +81,6 @@ def connect_google(payload):
         s.shutdown(socket.SHUT_WR)
 
         #continue accepting data until no more left
-        full_data = b""
         while True:
             data = s.recv(buffer_size)
             if not data:
@@ -93,7 +91,18 @@ def connect_google(payload):
         print(e)
     finally:
         #always close at the end!
+        return full_data
         s.close()
+def connect_client(conn, addr):
+    print("Connected by", addr)
+    
+    #recieve data, wait a bit, then send it back
+    client_data = conn.recv(BUFFER_SIZE)
+    time.sleep(0.5)
+    google_data = connect_google(client_data)
+    conn.sendall(google_data)
+    print("closed connection")
+
 
 if __name__ == "__main__":
     main()
