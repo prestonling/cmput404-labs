@@ -12,3 +12,4 @@ q4:
 q5
 - recieves the data from the client. From the terminal command, it would receive "Foobar"
 q6
+https://github.com/prestonling/cmput404-labs/tree/main/lab2
