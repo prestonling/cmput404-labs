@@ -7,10 +7,11 @@ QUERY_STRING
 HTTP_USER_AGENT
 4.)
 The posted data is stored in the cgi field storage
-cgi field storage
 5.)
 "Set-Cookie: logged=true;"
 6.)
 "HTTP_COOKIE"
 7.)
 Cookies are used for storing data locally in a clients browser. Maybe to use for historical information like if the user has already logged in
+8.)
+https://github.com/prestonling/cmput404-labs/tree/main/lab3
