@@ -1,3 +1,29 @@
 1.)
 https://github.com/prestonling/cmput404-labs
 2.)
+shows a webpage saying that Django is installed
+3.)
+when going to /, says page not found (not defined in urls)
+when going to /polls, displays "Hello world, you're	at the polls index."
+4.)
+Django migration is a way to update the database schema. We need it because we
+want to make changes to the database, and we need to tell Django how to do that
+5.)
+We see a Django admin page, and we can add questions and choices to the
+database. We go to the polls/admin.py file and add a model by using
+admin.site.register({Model})
+6.)
+We see a page that displays "You're looking at question 38"
+We see a page that displays "You're looking at the results of question 38"
+We see a page that displays "You're voting on question 38"
+We see a 404 "Page not found"
+To allow arbitrary alphabetical characters, we change int to str in 
+the url patterns. e.g '<int:question_id>/results/' to '<str:question_id>/results/'
+7.)
+If you make a change to the app structure, you would have to change all the hardcoded 
+urls as well 
+8.)
+Generic views allow us to write less code.
+We should use generic views when we have patterns in the templates
+We shouldn't use the a generic view if we don't want to change the view.
+
