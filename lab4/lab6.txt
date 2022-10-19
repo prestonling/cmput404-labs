@@ -1,2 +1,2 @@
 1.) You can use github actions to deploy to Heroku
-2.) 
+2.) a mechanism for declaring what commands are run by your application’s dynos on the Heroku platform

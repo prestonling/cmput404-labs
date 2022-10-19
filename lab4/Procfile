@@ -1,1 +1,1 @@
-web: gunicorn mysite.wsgi
+web: gunicorn preston-ling-cmput-404-lab6.wsgi
