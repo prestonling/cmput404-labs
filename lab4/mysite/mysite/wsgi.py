@@ -11,7 +11,7 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-path = '/home/path/to/project'
+path = '/Users/prestonling/dev/404labs/lab4/mysite'
 if path not in sys.path:
     sys.path.append(path)
     print(sys.path)
