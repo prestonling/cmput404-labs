@@ -1,0 +1,11 @@
+0.) 
+1.) Flask is a microframework for Python, while Django is a full-stack framework.
+    Django gives you the option to define views to webpages, while Flask are just API endpoints
+2.) Representational State Transfer. To be RESTful is to the set of architectural principles of REST for designing APIs
+3.) Create, Read, Update, Delete. POST, GET, PUT, DELETE respectively
+4.) 1xx - Informational, 2xx - Success, 3xx - Redirection, 4xx - Client Error, 5xx - Server Error
+5.) Injection attack, where malicious code is injected into a web application. One way a site can be vulnerable to this is by using user input in a SQL query without sanitizing it first.
+6.) COR stands for Cross-Origin Resource Sharing. You will need CORS protection when making requests and data transfers between browsers and servers
+
+
+
