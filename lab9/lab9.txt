@@ -1,0 +1,5 @@
+1.) HTTP Basic Authentication
+2.) Also uses basic authentication
+3.) Session Authentication sends a cookie to the client of the sessionID, which is saved in the databse, while token authentication sends a token to the client. The server only needs to check if the token is valid when a request is being sent, but 
+4.)The OAuth2 framwork works first by having the application send a request to the authorization server for a token. The client then sends a request to the resource server with the token, which if valid, then serves the resource.
+5.)

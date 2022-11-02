@@ -1,4 +1,4 @@
-0.) 
+0.) https://github.com/prestonling/cmput404-labs/tree/main/cmput404lab7
 1.) Flask is a microframework for Python, while Django is a full-stack framework.
     Django gives you the option to define views to webpages, while Flask are just API endpoints
 2.) Representational State Transfer. To be RESTful is to the set of architectural principles of REST for designing APIs
